@@ -1,0 +1,65 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "scrollbar": {
+    "axes": {
+      "horizontal": false
+    }
+  },
+  "relative_line_numbers": "enabled",
+  "buffer_font_family": ".ZedMono",
+  "ui_font_family": ".ZedSans",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_line_height": "standard",
+  "disable_ai": true,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "vim": {
+    "toggle_relative_line_numbers": true
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Warm Charmed Icons"
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Aura Dark",
+  },
+}
