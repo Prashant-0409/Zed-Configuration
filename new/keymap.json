@@ -1,0 +1,15 @@
+[
+  {
+    "context": "!Editor",
+    "bindings": {
+        "k": "menu::SelectNext",
+        "j": "menu::SelectPrevious",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore",
+    },
+  },
+]
