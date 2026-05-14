@@ -1,7 +1,12 @@
 {
-    "icon_theme": "Warm Charmed Icons",
-    "theme": "One Dark",
-    "theme_overrides": { 
+    "auto_update_extensions": {
+        "assembly": false,
+    },
+    "cli_default_open_behavior": "existing_window",
+    "icon_theme": "Warm Charmed Icons", // sets icon theme
+    "theme": "One Dark", // sets theme
+    "theme_overrides": {
+        // overrides theme features
         "One Dark": {
             "border.variant": "#282c33ff",
             "border": "#282c33ff",
@@ -12,26 +17,32 @@
             "tab_bar.background": "#282c33ff",
             "tab.active_background": "#282c33ff",
             "tab.inactive_background": "#282c33ff",
+            "background": "#282c33ff",
         },
     },
     "title_bar": {
+        // sets title bar properties
         "show_onboarding_banner": false,
         "show_project_items": false,
         "show_branch_name": false,
     },
     "tab_bar": {
+        // sets tab bar properties
         "show": false,
     },
     "toolbar": {
-        "quick_actions": false,
+        // sets toolbar properties
+        // "quick_actions": false,
     },
     "status_bar": {
-        "experimental.show": false,
+        // sets status bar properties
+        // "experimental.show": false,
     },
     "project_panel": {
+        // sets project panel properties
         "dock": "right",
         "hide_root": true,
-        "default_width": 350,
+        "default_width": 300,
         "auto_fold_dirs": false,
         "scrollbar": {
             "show": "never",
@@ -41,32 +52,46 @@
         },
     },
     "outline_panel": {
+        // sets outline panel properties
+        "dock": "right",
         "default_width": 300,
         "indent_guides": {
             "show": "never",
         },
     },
     "file_finder": {
+        // sets file finder properties
         "modal_max_width": "xlarge",
     },
     "scrollbar": {
+        // sets scrollbar properties
         "show": "never",
     },
     "gutter": {
+        // sets gutter properties
         "min_line_number_digits": 0,
         "folds": false,
     },
     "indent_guides": {
+        // sets indent guides properties
         "enabled": false,
     },
-    "ui_font_family": ".ZedSans",
-    "ui_font_size": 17.0,
-    "ui_font_weight": 500.0,
-    "buffer_font_family": ".ZedMono",
-    "buffer_font_size": 15,
-    "buffer_font_weight": 500.0,
-    "buffer_line_height": "standard",
-    "vim_mode": true,
+    "terminal": {
+        // sets teminal height properties
+        "default_height": 9999,
+    },
+    "ui_font_family": ".ZedSans", // sets ui font family
+    "ui_font_size": 17.0, // sets ui font size
+    "ui_font_weight": 500.0, // sets ui font weight
+    "buffer_font_family": ".ZedMono", // sets buffer font family
+    "buffer_font_size": 15, // sets buffer font size
+    "buffer_font_weight": 500.0, // sets buffer font weight
+    "buffer_font_features": {
+        // sets font ligatures to false
+        "calt": false,
+    },
+    "buffer_line_height": "standard", // sets buffer line height
+    "vim_mode": true, // sets vim mode true
     "selection_highlight": false,
     "current_line_highlight": "none",
     "show_whitespaces": "none",
@@ -74,19 +99,23 @@
     "auto_indent_on_paste": false,
     "autosave": {
         "after_delay": {
-            "milliseconds": 1000,
+            "milliseconds": 500,
         },
     },
     "extend_comment_on_newline": false,
-    "soft_wrap":"editor_width",
+    "soft_wrap": "editor_width", // soft wraps
     "when_closing_with_no_tabs": "keep_window_open",
     "close_on_file_delete": true,
     "restore_on_startup": "launchpad",
-    "session":{
+    "session": {
         "restore_unsaved_buffers": false,
     },
-    "disable_ai": true,
-    "buffer_font_features": {
-        "calt": false,
+    "disable_ai": true, // disables AI
+
+    //python lsp set up
+    "languages": {
+        "Python": {
+            "language_servers": ["ty", "!basedpyright"],
+        },
     },
 }

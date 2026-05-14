@@ -1,1 +1,1 @@
-# Zed-Configuration
+# Zed Configuration

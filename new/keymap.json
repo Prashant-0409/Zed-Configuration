@@ -1,15 +1,58 @@
 [
-  {
-    "context": "!Editor",
-    "bindings": {
-        "k": "menu::SelectNext",
-        "j": "menu::SelectPrevious",
+    {
+        // Context is selected only when Editor in insert
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "j j": "vim::NormalBefore", // goes from insert mode to normal mode
+            "j k": "vim::NormalBefore", // goes from insert mode to normal mode
+        },
     },
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      "j j": "vim::NormalBefore",
+    {
+        "context": "Workspace || Editor",
+        "bindings": {
+            "alt-s": "zed::OpenSettingsFile",
+            "alt-k": "zed::OpenKeymapFile",
+            "ctrl-q": "zed::Quit",
+        },
     },
-  },
+    {
+        // Context is selected only when not in Editor
+        "context": "!Editor",
+        "bindings": {
+            "j": "menu::SelectNext", // moves downward in menu
+            "k": "menu::SelectPrevious", // moves upward in menu
+        },
+    },
+    {
+        // Context is selected only when Editor in normal mode or right_dock is ProjectPanel or EmptyPane
+        "context": "(Editor && vim_mode == normal) || EmptyPane",
+        "bindings": {
+            "space f": "project_panel::Toggle", // Toggles Project Panel
+            "f f": "project_panel::ToggleFocus", // changes focus from editor to project_panel
+        },
+    },
+    {
+        // Key bindings for ProjectPanel
+        "context": "ProjectPanel",
+        "bindings": {
+            "h": "project_panel::CollapseSelectedEntry", // closes selected open folder
+            "l": "project_panel::ExpandSelectedEntry", // opens selected folder
+            "q": "project_panel::CollapseAllEntries", // closes all the open folders
+            "w": "workspace::CloseActiveDock",
+            "space f": "project_panel::Toggle", // Toggles project_panel
+            "f f": "project_panel::ToggleFocus", // changes focus from project_panel to editor
+        },
+    },
+    {
+        "context": "(Editor && vim_mode == normal) || EmptyPane",
+        "bindings": {
+            "space o": "outline_panel::Toggle",
+        },
+    },
+    {
+        "context": "OutlinePanel",
+        "bindings": {
+            "alt": "menu::Cancel",
+        },
+    },
 ]
